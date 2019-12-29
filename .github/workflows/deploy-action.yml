@@ -28,4 +28,4 @@ jobs:
         GITHUB_USERNAME: x-access-token
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run:
-        mvn -DskipTests --settings settings.xml deploy
+        mvn -e -B -DskipTests --settings settings.xml deploy

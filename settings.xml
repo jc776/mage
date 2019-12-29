@@ -27,6 +27,22 @@
                     <name>GitHub jc776 Apache Maven Packages</name>
                     <url>https://maven.pkg.github.com/jc776</url>
                 </repository>
+                <repository>
+                    <id>jboss-public-repository</id>
+                    <name>JBoss Repository</name>
+                    <url>https://repository.jboss.org/nexus/content/groups/public</url>
+                    <!-- These optional flags are designed to speed up your builds by reducing remote server calls -->
+                    <releases>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <updatePolicy>daily</updatePolicy>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>local-project-repo</id>
+                    <url>file://${basedir}/repository</url>
+                </repository>
             </repositories>
         </profile>
     </profiles>
